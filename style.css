@@ -226,20 +226,23 @@ button:hover{
         height: 50px;
         width: fit-content;
         max-width: 50px;
-        font-size: 32px;
+        font-size: 24px;
     }
     button{
         width: 80px;
         height: 40px;
         border-radius: 20px;
+        font-size:12px ;
     }
     .stop-button{
         width: 80px;
         border-radius: 20px;
+        font-size: 12px;
     }
     .delete-button {
         width: 80px;
         border-radius: 20px;
+        font-size: 12px;
     }
     .setTime{
         font-size: 18px;
@@ -262,7 +265,7 @@ button:hover{
     input{
         height: 40px;
         max-width: 30px;
-        font-size: 24px;
+        font-size: 16px;
     }
     button{
         width: 60px;
