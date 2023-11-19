@@ -3,7 +3,7 @@ const activeTimers = document.querySelector('.active-timers');
 //audio file in global space
 const audio = new Audio('./assets/timer.mp3');
 // Display the initial "You have no timers currently!" text
-displayNoTimersText();
+
 
 // Get a reference to the 'startTimer' button in the HTML
 const startTimerButton = document.querySelector('.set');
