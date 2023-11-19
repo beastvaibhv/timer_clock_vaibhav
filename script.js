@@ -1,7 +1,7 @@
 // Get a reference to the 'activeTimers' element in the HTML
 const activeTimers = document.querySelector('.active-timers');
 //audio file in global space
-const audio = new Audio('./assets/timer.mp3'); 
+const audio = new Audio('./assets/timer.mp3');
 // Display the initial "You have no timers currently!" text
 displayNoTimersText();
 
@@ -132,7 +132,7 @@ function createTimer(totalSeconds) {
 // Function to display "You have no timers currently!" text
 function displayNoTimersText() {
     const noTimersText = document.createElement('p');
-    noTimersText.classList.add('no-timers-text');
+    noTimersText.classList.add('no-timer-text');
     noTimersText.textContent = 'You have no timers currently!';
     noTimersText.style.fontSize = "14px";
     activeTimers.appendChild(noTimersText);
@@ -141,9 +141,9 @@ function displayNoTimersText() {
 // Function to remove "You have no timers currently!" text
 function removeNoTimersText() {
     // Find and remove the "You have no timers currently!" text
-    const noTimersText = activeTimers.querySelector('.no-timers-text');
+    const noTimersText = activeTimers.querySelector('.no-timer-text');
     if (noTimersText) {
-        noTimersText.remove();
+        activeTimers.removeChild(noTimersText);
     }
 }
 
