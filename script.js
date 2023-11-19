@@ -1,5 +1,7 @@
 // Get a reference to the 'activeTimers' element in the HTML
 const activeTimers = document.querySelector('.active-timers');
+//audio file in global space
+const audio = new Audio('./assets/timer.mp3'); 
 // Display the initial "You have no timers currently!" text
 displayNoTimersText();
 
@@ -101,12 +103,14 @@ function createTimer(totalSeconds) {
 
     // Add a click event listener to the 'Delete' button
     deleteButton.addEventListener('click', () => {
+        stopAudioAlert();
         // Remove the timer container
         timerContainer.remove();
         // Check if there are no timers, then display "You have no timers currently!" text
         if (activeTimers.children.length === 0) {
             displayNoTimersText();
         }
+       
     });
 
     // Start the timer interval
@@ -145,6 +149,13 @@ function removeNoTimersText() {
 
 // Function to play an audio alert
 function playAudioAlert() {
-    const audio = new Audio('./assets/timer.mp3'); 
+    
     audio.play();
+}
+
+function stopAudioAlert() {
+    if (audio) {
+        audio.pause(); // Pause the audio
+        audio.currentTime = 0; // Reset the audio to the beginning
+    }
 }
