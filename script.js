@@ -62,7 +62,7 @@ function createTimer(totalSeconds) {
     // Create the 'Stop Timer' button
     const stopButton = document.createElement('button');
     stopButton.classList.add('control-button', 'stop-button');
-    stopButton.textContent = 'Stop Timer';
+    stopButton.textContent = 'Delete';
 
     // Create the 'Delete' button
     const deleteButton = document.createElement('button');
@@ -79,8 +79,11 @@ function createTimer(totalSeconds) {
             clearInterval(timerInterval);
             timerElement.classList.add('timer-ended');
             timerElement.textContent = "Time is up!";
+            timerElement.style.paddingLeft="2rem";
             stopButton.style.display = 'none'; // Hide the Stop Timer button
-            deleteButton.style.display = 'inline'; // Show the delete button
+            deleteButton.style.display = 'inline';
+            deleteButton.style.paddingRight="2rem";
+             // Show the delete button
             timeLeftElement.style.display = 'none';
             // Play an audio alert when Time is up!
             playAudioAlert();

@@ -22,7 +22,7 @@ h1{
 }
 .container{
     background-color:#34344A;
-    height: 20vh;
+    height: 8rem;
     width: 50rem;
     border-radius: 2rem;
     display: flex;
@@ -45,6 +45,10 @@ h1{
 .timer-values>div{
  
    margin: 1rem;
+}
+.setTime{
+    color:white;
+    font-size: 24px;
 }
 input{
     height: 50px;
@@ -70,7 +74,7 @@ button:hover{
     transform: scale(1.1);
 }
 .current-timer{
-    width: 15%;
+    width: 15rem;
     margin-top: 2rem;
     height: 5rem;
     display: flex;
@@ -89,11 +93,14 @@ button:hover{
     border-radius: 15px;
 }
 .active-timers{
+    display: flex;
+    justify-content: center;
+    width: 50rem;
     margin-top: 2rem;
 }
 .no-timer-text{
     color: white;
-    font-size: 24px;
+    font-size: 18px;
 
 }
 /*      */
@@ -122,25 +129,27 @@ button:hover{
 
 
 .timer-container {
-    width: 40rem;
-    height: 15vh;
+    width: 80%;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 40px;
     background-color:  #34344A;
     color: white;
 }
 
 .timer {
+  
     font-size: 24px;
 }
 
 .timer-ended {
     color: #F0F757;
 }
+
 
 .time-left {
     font-size: 18px;
@@ -165,6 +174,7 @@ button:hover{
     font-weight: 700;
     font-size: 16px;
     width: 100px;
+    border-radius:25px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -178,6 +188,7 @@ button:hover{
     font-weight: 700;
     font-size: 16px;
     width: 100px;
+    border-radius: 25px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -185,4 +196,82 @@ button:hover{
 .delete-button:hover {
     transform: scale(1.1);
 
+}
+
+
+@media  screen and (max-width: 1100px) {
+    .container{
+        width:80%;
+    }
+    .active-timers{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 850px){
+    .container{
+        width:90%;
+    }
+    .active-timers{
+        width: 85%;
+    }
+    .timer-values>div{
+        margin: .5rem;
+    }
+    .timer {
+  
+        font-size: 18px;
+    }
+    input{
+        height: 50px;
+        width: fit-content;
+        max-width: 50px;
+        font-size: 32px;
+    }
+    button{
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .stop-button{
+        width: 80px;
+        border-radius: 20px;
+    }
+    .delete-button {
+        width: 80px;
+        border-radius: 20px;
+    }
+    .setTime{
+        font-size: 18px;
+    }
+}
+@media  screen and (max-width: 550px){
+    .timer {
+  
+        font-size: 14px;
+    }
+    .active-timers{
+        width: 90%;
+    }
+    .timer-container{
+        width: 95%;
+    }
+    .setTime{
+        font-size: 16px;
+    }
+    input{
+        height: 40px;
+        max-width: 30px;
+        font-size: 24px;
+    }
+    button{
+        width: 60px;
+    }
+    .stop-button{
+        width: 60px;
+    }
+    .delete-button {
+        width: 60px;
+       
+    }
 }
